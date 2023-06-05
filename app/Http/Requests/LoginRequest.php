@@ -28,4 +28,12 @@ class LoginRequest extends FormRequest
             'password' => 'required'
         ];
     }
+
+    public function messages(): array
+    {
+        return [
+            'name.required' => 'Useless person! forgot to put your name',
+            'email.required' => 'Soild idiot hai!! You forgot to put your email'
+        ];
+    }
 }

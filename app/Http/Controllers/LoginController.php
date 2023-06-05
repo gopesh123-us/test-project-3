@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\LoginRequest;
 use Illuminate\Http\Request;
 use Symfony\Contracts\Service\Attribute\Required;
 
@@ -12,7 +13,7 @@ class  LoginController extends Controller
         return view('login');
     }
 
-    public function handleLogin(Request $request)
+    public function handleLogin(LoginRequest $request)
     {
         /* echo $request->name;
         echo $request->email;
@@ -31,7 +32,7 @@ class  LoginController extends Controller
             [
                 'name.required' => 'Useless person! forgot to put your name'
             ]
-        );
-        return $request->all(); */
+        ); */
+        return $request;
     }
 }
