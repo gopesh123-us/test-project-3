@@ -6,6 +6,7 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ControllerPracticeController;
 use App\Http\Controllers\SingleActionController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\MyHomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,6 +23,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/myhome', [MyHomeController::class, 'index'])->name('my.home');
 
 Route::get('/home', function () {
     $blogs =
